@@ -1,0 +1,3 @@
+A maneira mais rápida de criar um hiperlink básico em um documento Microsoft 365 é pressionar ENTER ou a BARRA DE ESPAÇO depois de digitar o endereço de uma página da Web existente, como http://www.contoso.com. Microsoft 365 converte automaticamente o endereço em um link.
+
+Além das páginas da Web, você pode criar links para arquivos novos ou existentes em seu computador, para endereços de email e para locais específicos em um documento. Você também pode editar o endereço, o texto de exibição e o estilo da fonte ou a cor de um hiperlink.
