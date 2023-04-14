@@ -57,8 +57,9 @@ public class Q8_EduardoAugusto extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Verifica se ainda há tentativas disponíveis
-        if (tentativaAtual > NUMERO_MAXIMO_TENTATIVAS) {
+        if (tentativaAtual >= NUMERO_MAXIMO_TENTATIVAS) {
             labelResultado.setText("Você excedeu o número máximo de tentativas! O número escolhido era o " + numeroAleatorio + ".");
+
             return;
         }
 
@@ -67,15 +68,16 @@ public class Q8_EduardoAugusto extends JFrame implements ActionListener {
         int numeroEscolhido = Integer.parseInt(botaoClicado.getText());
         if (numeroEscolhido == numeroAleatorio) {
             labelResultado.setText("Parabéns! Você acertou o número " + numeroAleatorio + " na tentativa " + tentativaAtual + ".");
+            return;
         } else {
             labelResultado.setText("Você errou!");
+            if (tentativaAtual < NUMERO_MAXIMO_TENTATIVAS) {
+                tentativaAtual++;
+                textFieldTentativa.setText(String.valueOf(tentativaAtual));
+            }
         }
 
         // Atualiza o número da tentativa e o campo de texto correspondente
-        tentativaAtual++;
-        if (tentativaAtual <= NUMERO_MAXIMO_TENTATIVAS) {
-            textFieldTentativa.setText(String.valueOf(tentativaAtual-1));
-        }
     }
 
     public static void main(String[] args) {
